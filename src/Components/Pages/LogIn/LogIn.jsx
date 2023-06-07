@@ -5,7 +5,7 @@ const LogIn = () => {
         <div className="hero min-h-screen bg-base-200">
   <div className="">
     <div className="text-center mb-10">
-      <h1 className="text-5xl font-bold ">Please Login now!</h1>
+      <h1 className="text-5xl font-bold">Please Login now!</h1>
     </div>
     <form className="card w-full max-w-md shadow-2xl bg-base-100">
       <div className="card-body">
@@ -25,8 +25,11 @@ const LogIn = () => {
           <button className="btn bg-gradient-to-r from-red-600 from-10% via-white via-50% to-red-600 to-90% text-red-600 font-bold hover:text-white hover:bg-gradient-to-r hover:from-white hover:via-red-700 hover:to-white ">Login</button>
         </div>
       </div>
+      <div className="">
+        
+      </div>
       <div className="px-10 pb-4">
-      <p className="font-semibold">If you new SMASH? Please <Link to={'/register'} className="text-red-700 font-bold">Registration.</Link></p>
+      <p className="font-semibold">If you new SMASH? Please <Link to={'/registration'} className="text-red-700 font-bold">Registration.</Link></p>
       </div>
     </form>
   </div>
