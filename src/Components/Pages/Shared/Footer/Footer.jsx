@@ -12,22 +12,22 @@ const Footer = () => {
   </div> 
   <div>
     <span className="footer-title">QUICK LINKS</span> 
-    <Link to={'/about'} className="link-hover">Branding</Link>
-    <a className="link link-hover">Design</a> 
-    <a className="link link-hover">Marketing</a> 
-    <a className="link link-hover">Advertisement</a>
+    <Link to={'/instructor'} className="link-hover">Instructor</Link>
+    <Link to={'/classes'} className="link-hover">Classes</Link>
+    <Link to={'/about'} className="link-hover">About Us</Link>
+    <Link to={'/contact'} className="link-hover">Contact Us</Link>
   </div> 
   <div>
     <span className="footer-title">USEFUL LINKS</span> 
-    <a className="link link-hover">About us</a> 
-    <a className="link link-hover">Contact</a> 
-    <a className="link link-hover">Jobs</a> 
-    <a className="link link-hover">Press kit</a>
+    <Link className="link-hover">Privacy Policy</Link>
+    <Link className="link-hover">Terms & Condition</Link>
+    <Link className="link-hover">Disclaimer</Link>
+    <Link className="link-hover">FAQ</Link>
   </div> 
   <div>
     <span className="footer-title">GET IN TOUCH</span> 
-    <div className="">
-        <p>Block-J, Baridhara, Dhaka, Bangladesh</p>
+    <div className="leading-7">
+         <p>Block-J, Baridhara, Dhaka, Bangladesh</p>
 <p>
 (+62) 81 2345 6789
 </p>
