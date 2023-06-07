@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const LogIn = () => {
     return (
@@ -21,8 +22,11 @@ const LogIn = () => {
           <input type="password" placeholder="password" name="password" required className="input input-bordered" />
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn bg-gradient-to-r from-red-600 from-10% via-white via-50% to-red-600 to-90% text-red-600 font-bold hover:text-white hover:bg-gradient-to-r hover:from-white hover:via-red-700 hover:to-white ">Login</button>
         </div>
+      </div>
+      <div className="px-10 pb-4">
+      <p className="font-semibold">If you new SMASH? Please <Link to={'/register'} className="text-red-700 font-bold">Registration.</Link></p>
       </div>
     </form>
   </div>
