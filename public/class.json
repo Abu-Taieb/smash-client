@@ -6,7 +6,7 @@
       "instructor": "John Smith",
       "email": "john@example.com",
       "seats": 20,
-      "students": 25,
+      "students": 49,
       "price": 199.99,
       "details": "Join our Soccer Academy to enhance your skills, improve your techniques, and participate in friendly matches. Open to all ages and skill levels."
     },
@@ -28,7 +28,7 @@
         "instructor": "Alexandra Adams",
         "email": "alexandra@example.com",
         "seats": 12,
-        "students": 22,
+        "students": 32,
         "price": 199.99,
         "details": "Enroll in our martial arts academy to learn self-defense techniques, discipline, and build physical fitness. We offer training in various martial arts styles."
     },
@@ -39,7 +39,7 @@
       "instructor": "Sarah Davis",
       "email": "sarah@example.com",
       "seats": 15,
-      "students": 45,
+      "students": 27,
       "price": 249.99,
       "details": "Experience the thrill of basketball in our state-of-the-art facility. Our academy offers coaching, drills, and competitive games for both beginners and advanced players."
     },
@@ -50,7 +50,7 @@
         "instructor": "Michael Thompson",
         "email": "michael@example.com",
         "seats": 8,
-        "students": 15,
+        "students": 24,
         "price": 299.99,
         "details": "Improve your swing and perfect your putt at our golf academy. Our expert coaches prov_ide personalized lessons and gu_idance to help you excel on the golf course."
     },
@@ -61,7 +61,7 @@
         "instructor": "Dav_id Johnson",
         "email": "dav_id@example.com",
         "seats": 10,
-        "students": 29,
+        "students": 19,
         "price": 179.99,
         "details": "Learn tennis from professional coaches, refine your technique, and participate in friendly tournaments. Suitable for all ages and skill levels."
       }

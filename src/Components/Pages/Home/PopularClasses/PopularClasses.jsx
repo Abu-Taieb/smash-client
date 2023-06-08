@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PCC from "./PCC";
+import PopularClassCard from "./PopularClassCard";
 
 const PopularClasses = () => {
 
@@ -21,10 +21,10 @@ const PopularClasses = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-16">
                 {
-                    popularClasses.map(classes => <PCC 
+                    popularClasses.map(classes => <PopularClassCard
                         key={classes._id}
                         classes={classes}
-                        ></PCC>)
+                    ></PopularClassCard>)
                 }
             </div>
         </div>

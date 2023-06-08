@@ -1,0 +1,57 @@
+[
+    {
+      "_id": "1",
+      "name": "Alex Johnson",
+      "email": "alex.johnson@example.com",
+      "image": "https://example.com/images/alex.jpg",
+      "numClasses": 10,
+      "classes": ["Tennis", "Yoga"],
+      "details": "Alex Johnson is a certified tennis and yoga instructor with 10 years of experience. He has a passion for teaching and believes in creating a fun and engaging environment for his students."
+    },
+    {
+      "_id": "2",
+      "name": "Emma Wilson",
+      "email": "emma.wilson@example.com",
+      "image": "https://example.com/images/emma.jpg",
+      "numClasses": 8,
+      "classes": ["Basketball", "Pilates"],
+      "details": "Emma Wilson is a skilled basketball and pilates instructor. She has 8 years of experience and focuses on helping her students improve their skills and achieve their fitness goals."
+    },
+    {
+      "_id": "3",
+      "name": "Daniel Thompson",
+      "email": "daniel.thompson@example.com",
+      "image": "https://example.com/images/daniel.jpg",
+      "numClasses": 12,
+      "classes": ["Swimming", "CrossFit"],
+      "details": "Daniel Thompson is a dedicated swimming and CrossFit instructor. With 12 years of experience, he aims to instill confidence and technique in his students, helping them reach their full potential."
+    },
+    {
+      "_id": "4",
+      "name": "Olivia Davis",
+      "email": "olivia.davis@example.com",
+      "image": "https://example.com/images/olivia.jpg",
+      "numClasses": 6,
+      "classes": ["Yoga", "Meditation"],
+      "details": "Olivia Davis is a certified yoga and meditation instructor. With 6 years of experience, she creates a calm and nurturing environment for her students, focusing on mindfulness and relaxation."
+    },
+    {
+      "_id": "5",
+      "name": "William Smith",
+      "email": "william.smith@example.com",
+      "image": "https://example.com/images/william.jpg",
+      "numClasses": 9,
+      "classes": ["Soccer", "Functional Training"],
+      "details": "William Smith is an enthusiastic soccer and functional training instructor. He has 9 years of experience and brings his passion for the sport into his classes, helping his students develop skills and improve their fitness."
+    },
+    {
+      "_id": "6",
+      "name": "Sophia Anderson",
+      "email": "sophia.anderson@example.com",
+      "image": "https://example.com/images/sophia.jpg",
+      "numClasses": 7,
+      "classes": ["Gymnastics", "Acrobatics"],
+      "details": "Sophia Anderson is a talented gymnastics and acrobatics instructor. With 7 years of experience, she focuses on strength, flexibility, and creativity, guiding her students to achieve their gymnastic goals."
+    }
+  ]
+  
