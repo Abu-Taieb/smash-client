@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 
 const Registration = () => {
+
+  
+
+
     return (
         <div className="hero min-h-screen bg-base-200">
   <div className="">
     <div className="text-center mb-10">
-      <h1 className="text-5xl font-bold">Please Registration!</h1>
+      <h1 className="text-5xl font -bold">Please Registration!</h1>
     </div>
     <form className="card w-full max-w-md shadow-2xl bg-base-100">
       <div className="card-body">
