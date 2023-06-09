@@ -1,8 +1,12 @@
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
-const Registration = () => {
 
-  
+const Registration = () => {
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = data => {
+    console.log(data)
+  };
 
 
     return (
@@ -11,22 +15,27 @@ const Registration = () => {
     <div className="text-center mb-10">
       <h1 className="text-5xl font -bold">Please Registration!</h1>
     </div>
-    <form className="card w-full max-w-md shadow-2xl bg-base-100">
+    <form onSubmit={handleSubmit(onSubmit)} className="card w-full max-w-md shadow-2xl bg-base-100">
       <div className="card-body">
         <div className="form-control">
-          <input type="text" name="name" placeholder="Name" required className="input input-bordered" />
+          <input type="text" {...register("name", { required: true })} name="name" placeholder="Name" className="input input-bordered" />
+          {errors.name && <span className="text-red-400">Name is required</span>}
         </div>
         <div className="form-control">
-          <input type="email" name="email" placeholder="Email" required className="input input-bordered" />
+          <input type="email" {...register("email", { required: true })} name="email" placeholder="Email" className="input input-bordered" />
+          {errors.email && <span className="text-red-400">Email is required</span>}
         </div>
         <div className="form-control">
-          <input type="password" placeholder="Password" name="password" required className="input input-bordered" />
+          <input type="password" placeholder="Password" {...register("password", { required: true })} name="password" className="input input-bordered" />
+          {errors.password && <span className="text-red-400">Password is required</span>}
         </div>
         <div className="form-control">
-          <input type="password" placeholder="Confirm password" name="password" required className="input input-bordered" />
+          <input type="password" placeholder="Confirm password" {...register("confirmPassword", { required: true })} name="confirmPassword" className="input input-bordered" />
+          {errors.confirmPassword && <span className="text-red-400">Password is required</span>}
         </div>
         <div className="mt-2">
-          <input type="file" placeholder="Photo Url" name="file" required/>
+          <input type="file" placeholder="Photo Url" {...register("file", { required: true })} name="file"/>
+          {errors.file && <span className="text-red-400"><br />Image is required</span>}
         </div>
         <div className="form-control mt-6">
           <button className="btn bg-gradient-to-r from-red-600 from-10% via-white via-50% to-red-600 to-90% text-red-600 font-bold hover:text-white hover:bg-gradient-to-r hover:from-white hover:via-red-700 hover:to-white ">Sign Up</button>
