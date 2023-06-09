@@ -5,12 +5,11 @@ import { AuthContext } from "../../../Providers/AuthProviders";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
 
   const handleLogOut = () => {
     logOut()
-    .then(() => {})
-    .catch(error => console.log(error))
+      .then(() => {})
+      .catch((error) => console.log(error));
   };
 
   const navItems = (
@@ -35,7 +34,6 @@ const Navbar = () => {
           Dashboard
         </NavLink>
       </li>
-      
     </>
   );
 
@@ -74,21 +72,35 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 gap-5">{navItems}</ul>
       </div>
       <div className="navbar-end">
-      {user ? (
-        <>
-          <p className="lowercase">{user.email}</p>
-          <button className="btn btn-sm bg-gradient-to-r from-red-600 to-white text-white font-bold hover:from-white hover:to-red-600 border-0 mx-2" onClick={handleLogOut}>Log Out</button>
-        </>
-      ) : (
-        <>
-          <Link
-          to={"/logIn"}
-          className="btn btn-sm bg-gradient-to-r from-red-600 to-white text-white font-bold hover:from-white hover:to-red-600 border-0"
-        >
-          Log in
-        </Link>
-        </>
-      )}
+        {user ? (
+          <>
+            {user?.photoURL ? (
+              <div className="avatar tooltip tooltip-bottom" data-tip={user.displayName}>
+                <div className="w-12 rounded-full">
+                  <img src={user?.photoURL} alt="" />
+                </div>
+              </div>
+            ) : (
+              <p className="lowercase">{user.displayName}</p>
+            )}
+
+            <button
+              className="btn btn-sm bg-gradient-to-r from-red-600 to-white text-white font-bold hover:from-white hover:to-red-600 border-0 mx-2"
+              onClick={handleLogOut}
+            >
+              Log Out
+            </button>
+          </>
+        ) : (
+          <>
+            <Link
+              to={"/logIn"}
+              className="btn btn-sm bg-gradient-to-r from-red-600 to-white text-white font-bold hover:from-white hover:to-red-600 border-0"
+            >
+              Log in
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );
