@@ -14,8 +14,8 @@ const Registration = () => {
   const onSubmit = (data) => {
     console.log(data);
     createUser(data.email, data.password).then((result) => {
-      const loggedUser = result.user;
-      console.log(loggedUser);
+      const signUpUser = result.user;
+      console.log(signUpUser);
     });
   };
 
@@ -105,7 +105,7 @@ const Registration = () => {
             <div className="form-control mt-6">
               <input
                 type="Submit"
-                value="Sign Up"
+                defaultValue="Sign Up"
                 className="btn bg-gradient-to-r from-red-600 from-10% via-white via-50% to-red-600 to-90% text-red-600 font-bold hover:text-white hover:bg-gradient-to-r hover:from-white hover:via-red-700 hover:to-white "
               />
             </div>
