@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className="text-center bg-black h-screen flex items-center">
-      <div className="card lg:card-side bg-base-100 w-4/12 mx-auto">
+    <div className="text-center bg-black h-screen flex items-center p-10">
+      <div className="card lg:card-side bg-base-100 w-full sm:w-8/12 md:w-6/12 lg:w-4/12 mx-auto">
         <div className="card-body">
           <h2 className="font-bold text-4xl text-red-600">Oops!</h2>
           <img
