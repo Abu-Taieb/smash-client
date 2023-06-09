@@ -61,7 +61,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 text-black"
           >
             {navItems}
           </ul>
@@ -77,7 +77,7 @@ const Navbar = () => {
       {user ? (
         <>
           <p className="lowercase">{user.email}</p>
-          <button onClick={handleLogOut}>Sign Out</button>
+          <button className="btn btn-sm bg-gradient-to-r from-red-600 to-white text-white font-bold hover:from-white hover:to-red-600 border-0 mx-2" onClick={handleLogOut}>Log Out</button>
         </>
       ) : (
         <>
