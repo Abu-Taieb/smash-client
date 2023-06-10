@@ -92,10 +92,10 @@ const Registration = () => {
               <input
                 type="file"
                 placeholder="Photo Url"
-                {...register("file", { required: true })}
+                {...register("photoUrl", { required: true })}
                 name="file"
               />
-              {errors.file && (
+              {errors.photoUrl && (
                 <span className="text-red-400">
                   <br />
                   Image is required

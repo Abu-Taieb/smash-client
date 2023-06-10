@@ -1,32 +1,36 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { useContext } from "react";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 
 const LogIn = () => {
   const { signIn, googleSignIn, fbSignIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  // Sign in with google 
+  const from = location.state?.from?.pathname || "/";
+
+  // Sign in with google
   const handleGoogleSignIn = () => {
     googleSignIn()
-    .then(result => {
-      const user = result.user;
-      console.log(user);
-    })
-    .catch(error => console.log(error))
-  }
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.log(error));
+  };
 
-  // Sign in with Facebook 
+  // Sign in with Facebook
   const handleFacebookSignIn = () => {
     fbSignIn()
-    .then(result => {
-      const fbUser = result.user;
-      console.log(fbUser);
-    })
-    .catch(error => console.log(error))
-  }
+      .then((result) => {
+        const fbUser = result.user;
+        console.log(fbUser);
+      })
+      .catch((error) => console.log(error));
+  };
 
-  // Sign in with email & password 
+  // Sign in with email & password
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -37,6 +41,7 @@ const LogIn = () => {
       .then((result) => {
         const signInUser = result.user;
         console.log(signInUser);
+        navigate(from, { replace: true });
       })
       .catch((error) => console.log(error));
   };
@@ -83,11 +88,17 @@ const LogIn = () => {
             </div>
           </div>
           <div className="flex gap-3 px-10 mb-5">
-            <button onClick={handleGoogleSignIn} className="flex items-center gap-2 border border-red-200 rounded p-2 w-1/2 justify-center">
+            <button
+              onClick={handleGoogleSignIn}
+              className="flex items-center gap-2 border border-red-200 rounded p-2 w-1/2 justify-center"
+            >
               <p className="font-semibold">Google </p>
               <FaGoogle />
             </button>
-            <button onClick={handleFacebookSignIn} className="flex items-center gap-2 border border-red-200 rounded p-2 w-1/2 justify-center">
+            <button
+              onClick={handleFacebookSignIn}
+              className="flex items-center gap-2 border border-red-200 rounded p-2 w-1/2 justify-center"
+            >
               <p className="font-semibold">Facebook </p>
               <FaFacebook />
             </button>

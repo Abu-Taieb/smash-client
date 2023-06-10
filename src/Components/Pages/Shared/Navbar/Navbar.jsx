@@ -74,15 +74,11 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <>
-            {user?.photoURL ? (
-              <div className="avatar tooltip tooltip-bottom" data-tip={user.displayName}>
+            <div className="avatar tooltip tooltip-bottom" data-tip={user.displayName}>
                 <div className="w-12 rounded-full">
                   <img src={user?.photoURL} alt="" />
                 </div>
               </div>
-            ) : (
-              <p className="lowercase">{user.displayName}</p>
-            )}
 
             <button
               className="btn btn-sm bg-gradient-to-r from-red-600 to-white text-white font-bold hover:from-white hover:to-red-600 border-0 mx-2"
