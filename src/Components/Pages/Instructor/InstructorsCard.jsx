@@ -1,5 +1,5 @@
 const InstructorsCard = (teacher) => {
-  const { name, email, image, numClasses, students } = teacher.teacher;
+  const { name, email, image, numClasses, classes, students } = teacher.teacher;
   console.log(teacher);
   return (
     <div>
@@ -15,6 +15,15 @@ const InstructorsCard = (teacher) => {
           </h5>
           <h5 className="font-semibold text-sm">
             Number of Students: {students}
+          </h5>
+          <h5 className="font-semibold text-sm">
+            Name of Classes:{" "}
+            <span className="border px-2 border-red-200 rounded py-1 mx-1">
+              {classes[0]}
+            </span>{" "}
+            <span className="border px-2 border-red-200 rounded py-1 mx-1">
+              {classes[1]}
+            </span>
           </h5>
         </div>
       </div>
