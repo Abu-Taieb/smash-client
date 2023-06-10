@@ -27,7 +27,9 @@ const AllClasses = (allClass) => {
           </div>
           <div className="flex justify-between items-center">
             <h5 className="font-semibold text-sm">Price: {price}</h5>
-            <button className="btn btn-sm bg-gradient-to-r from-red-600 to-white text-white font-bold hover:from-white hover:to-red-600 border-red-300 ">Select</button>
+            <button className="btn btn-sm bg-gradient-to-r from-red-600 to-white text-white font-bold hover:from-white hover:to-red-600 border-red-300 ">
+              Select
+            </button>
           </div>
         </div>
       </div>

@@ -13,8 +13,10 @@ const Instructors = () => {
   return (
     <div className="w-full mx-auto justify-center p-10 ">
       <div className="text-center md:w-7/12 mx-auto">
-      <h2 className="font-bold text-4xl uppercase my-5">Our All Instructors</h2>
-                <hr className="w-20 mx-auto border-2 border-red-600 mb-10" />
+        <h2 className="font-bold text-4xl uppercase my-5">
+          Our All Instructors
+        </h2>
+        <hr className="w-20 mx-auto border-2 border-red-600 mb-10" />
         <p className="text-slate-500 text-justify">
           At our academy & instructors are consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
