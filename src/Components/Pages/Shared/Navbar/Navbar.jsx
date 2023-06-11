@@ -1,10 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import logo from "../../../../../public/smash-logo-white-ok.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProviders";
+import { FaShoppingCart } from "react-icons/fa";
+import './Navbar.css'
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const {cart, setCart} = useState([])
 
   const handleLogOut = () => {
     logOut()
@@ -14,25 +17,28 @@ const Navbar = () => {
 
   const navItems = (
     <>
-      <li>
-        <NavLink className="p-3" to={"/"}>
+      <li className="">
+        <Link className="p-3" to="/">
           Home
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink className="p-3" to={"instructor"}>
+        <Link className="p-3" to="instructor">
           Instructors
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink className="p-3" to={"classes"}>
+        <Link className="p-3" to="classes">
           Classes
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink className="p-3" to={"dashboard"}>
-          Dashboard
-        </NavLink>
+        <Link className="p-3" to="dashboard">
+          <button className="gap-2 flex items-center px-2 py-1 rounded bg-red-600 text-white">
+          <FaShoppingCart></FaShoppingCart>
+          <span className="badge badge-white">+{cart?.length || 0}</span>
+          </button>
+        </Link>
       </li>
     </>
   );
@@ -69,7 +75,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-5">{navItems}</ul>
+        <ul className="menu menu-horizontal px-1 gap-5 items-center ">{navItems}</ul>
       </div>
       <div className="navbar-end">
         {user ? (
