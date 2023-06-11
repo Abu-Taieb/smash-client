@@ -5,7 +5,7 @@ const Classes = () => {
   const [allClasses, setAllClasses] = useState([]);
 
   useEffect(() => {
-    fetch("class.json")
+    fetch("https://smash-server.vercel.app/classes")
       .then((res) => res.json())
       .then((data) => setAllClasses(data));
   }, []);

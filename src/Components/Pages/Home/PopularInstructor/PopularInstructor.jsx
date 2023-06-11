@@ -5,7 +5,7 @@ const PopularInstructor = () => {
   const [instructors, setInstructors] = useState([]);
 
   useEffect(() => {
-    fetch("instructor.json")
+    fetch("https://smash-server.vercel.app/instructor")
       .then((res) => res.json())
       .then((data) => setInstructors(data));
   }, []);

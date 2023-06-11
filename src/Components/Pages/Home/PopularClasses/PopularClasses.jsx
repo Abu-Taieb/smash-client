@@ -6,7 +6,7 @@ const PopularClasses = () => {
     const [popularClasses, setPopularClasses] = useState([]);
 
     useEffect( () => {
-        fetch('class.json')
+        fetch('https://smash-server.vercel.app/classes')
         .then(res => res.json())
         .then(data => setPopularClasses(data))
     }, [])

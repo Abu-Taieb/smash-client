@@ -5,7 +5,7 @@ const Instructors = () => {
   const [teachers, setTeachers] = useState([]);
 
   useEffect(() => {
-    fetch("instructor.json")
+    fetch("https://smash-server.vercel.app/instructor")
       .then((res) => res.json())
       .then((data) => setTeachers(data));
   }, []);
