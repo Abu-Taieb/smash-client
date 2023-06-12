@@ -16,6 +16,7 @@ const LogIn = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        navigate(from, { replace: true });
       })
       .catch((error) => console.log(error));
   };
@@ -26,6 +27,7 @@ const LogIn = () => {
       .then((result) => {
         const fbUser = result.user;
         console.log(fbUser);
+        navigate(from, { replace: true });
       })
       .catch((error) => console.log(error));
   };

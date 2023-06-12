@@ -1,8 +1,8 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 import logo from "../../../../public/smash-logo-white-ok.png";
-import { FaBookReader, FaBookmark, FaDollarSign, FaHome } from "react-icons/fa";
+import { FaBook, FaBookDead, FaHome } from "react-icons/fa";
 
-const Dashboard = () => {
+const InstructorDashboard = () => {
   return (
     <div>
       <div className="drawer lg:drawer-open">
@@ -26,10 +26,12 @@ const Dashboard = () => {
               </Link>
               <hr className="w-24 mx-auto border-2 border-red-600 my-3" />
             </div>
+
             <div className="mb-5">
-              <h2 className="text-center text-red-600">Student Dashboard</h2>
-              <hr className="w-40 mx-auto border-1 border-red-600" />
+              <h2 className="text-center text-red-600">Instructor Dashboard</h2>
+              <hr className="w-44 mx-auto border-1 border-red-600" />
             </div>
+
             {/* Sidebar content here */}
             <li>
               <NavLink to="/">
@@ -38,21 +40,15 @@ const Dashboard = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/dashboard/selectedClasses">
-                <FaBookmark></FaBookmark>
-                My Selected Classes <span className="badge">+99</span>
+              <NavLink to="/instructorDashboard/addClass">
+                <FaBook></FaBook>
+                Add Class <span className="badge">+99</span>
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/dashboard/enrolledClasses"}>
-                <FaBookReader></FaBookReader>
-                My Enrolled Classes <span className="badge">+73</span>
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/dashboard/payment">
-                <FaDollarSign></FaDollarSign>
-                Payment
+              <NavLink to="/instructorDashboard/myClass">
+                <FaBookDead></FaBookDead>
+                My Class <span className="badge">+99</span>
               </NavLink>
             </li>
           </ul>
@@ -62,4 +58,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default InstructorDashboard;

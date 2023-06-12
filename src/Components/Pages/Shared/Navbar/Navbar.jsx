@@ -3,11 +3,11 @@ import logo from "../../../../../public/smash-logo-white-ok.png";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProviders";
 import { FaShoppingCart } from "react-icons/fa";
-import './Navbar.css'
+import "./Navbar.css";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const {cart, setCart} = useState([])
+  const { cart, setCart } = useState([]);
 
   const handleLogOut = () => {
     logOut()
@@ -34,10 +34,17 @@ const Navbar = () => {
       </li>
       <li>
         <Link className="p-3" to="dashboard">
-          <button className="gap-2 flex items-center px-2 py-1 rounded bg-red-600 text-white">
-          <FaShoppingCart></FaShoppingCart>
-          <span className="badge badge-white">+{cart?.length || 0}</span>
+          <button className="gap-2 flex items-center px-2 py-1 rounded text-white uppercase">
+            Student Dashboard
+            <span className="badge badge-white">
+              <FaShoppingCart></FaShoppingCart> + {cart?.length || 0}
+            </span>
           </button>
+        </Link>
+      </li>
+      <li>
+        <Link className="p-3" to="instructorDashboard">
+          Instructor Dashboard
         </Link>
       </li>
     </>
@@ -75,16 +82,21 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-5 items-center ">{navItems}</ul>
+        <ul className="menu menu-horizontal px-1 gap-5 items-center ">
+          {navItems}
+        </ul>
       </div>
       <div className="navbar-end">
         {user ? (
           <>
-            <div className="avatar tooltip tooltip-bottom" data-tip={user.displayName}>
-                <div className="w-12 rounded-full">
-                  <img src={user?.photoURL} alt="" />
-                </div>
+            <div
+              className="avatar tooltip tooltip-bottom"
+              data-tip={user.displayName}
+            >
+              <div className="w-12 rounded-full">
+                <img src={user?.photoURL} alt="" />
               </div>
+            </div>
 
             <button
               className="btn btn-sm bg-gradient-to-r from-red-600 to-white text-white font-bold hover:from-white hover:to-red-600 border-0 mx-2"

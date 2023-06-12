@@ -10,6 +10,10 @@ import SelectedClasses from "../Pages/Dashboard/SelectedClasses/SelectedClasses"
 import Dashboard from "../Layout/Main/Dashboard";
 import EnrolledClasses from "../Pages/Dashboard/EnrolledClasses/EnrolledClasses";
 import Payment from "../Pages/Dashboard/Payment/Payment";
+import PrivateRoute from "./PrivateRoute";
+import InstructorDashboard from "../Layout/InstructorDashboard/InstructorDashboard";
+import AddClass from "../Layout/InstructorDashboard/AddClass";
+import MyClass from "../Layout/InstructorDashboard/MyClass";
 
 export const router = createBrowserRouter([
   {
@@ -40,7 +44,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element: <Dashboard></Dashboard>,
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "selectedClasses",
@@ -53,6 +61,24 @@ export const router = createBrowserRouter([
       {
         path: "payment",
         element: <Payment></Payment>,
+      },
+    ],
+  },
+  {
+    path: "instructorDashboard",
+    element: (
+      <PrivateRoute>
+        <InstructorDashboard></InstructorDashboard>
+      </PrivateRoute>
+    ),
+    children: [
+      {
+        path: "addClass",
+        element: <AddClass></AddClass>,
+      },
+      {
+        path: "myClass",
+        element: <MyClass></MyClass>,
       },
     ],
   },
