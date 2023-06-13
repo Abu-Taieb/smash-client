@@ -12,7 +12,7 @@ const Navbar = () => {
   console.log(cart);
 
   useEffect(() => {
-    fetch('http://localhost:5000/addClass?email=taieb01945@gmail.com')
+    fetch('https://smash-server.vercel.app/addClass?email=taieb01945@gmail.com')
     .then(res => res.json())
     .then(data => setCart(data))
 }, [])

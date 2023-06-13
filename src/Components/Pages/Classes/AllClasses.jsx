@@ -33,7 +33,7 @@ const AllClasses = (allClass) => {
         name,
         seats
       };
-      fetch("http://localhost:5000/addClass", {
+      fetch("https://smash-server.vercel.app/addClass", {
         method: "POST",
         headers: {
           "content-type": "application/json",
