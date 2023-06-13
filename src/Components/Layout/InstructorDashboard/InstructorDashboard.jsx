@@ -15,6 +15,13 @@ const InstructorDashboard = () => {
           >
             Dashboard Menu
           </label>
+          {/* <div className="text-center">
+            <h2 className="text-5xl uppercase my-6 font-bold">
+              Welcome to your Dashboard
+            </h2>
+            <h4 className="text-3xl my-2 font-semibold">If you want to see many details,</h4>
+            <h4 className="text-3xl my-2 font-semibold">Please select the menu items.</h4>
+          </div> */}
         </div>
 
         <div className="drawer-side">
@@ -42,13 +49,13 @@ const InstructorDashboard = () => {
             <li>
               <NavLink to="/instructorDashboard/addClass">
                 <FaBook></FaBook>
-                Add Class <span className="badge">+99</span>
+                Add Class <span className="badge">+6</span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/instructorDashboard/myClass">
                 <FaBookDead></FaBookDead>
-                My Class <span className="badge">+99</span>
+                My Class <span className="badge">+8</span>
               </NavLink>
             </li>
           </ul>

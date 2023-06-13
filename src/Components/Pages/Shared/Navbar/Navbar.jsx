@@ -1,4 +1,5 @@
-import { useContext, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useContext, useEffect, useState } from "react";
 import logo from "../../../../../public/smash-logo-white-ok.png";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProviders";
@@ -8,6 +9,13 @@ import "./Navbar.css";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const { cart, setCart } = useState([]);
+  console.log(cart);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/addClass?email=taieb01945@gmail.com')
+    .then(res => res.json())
+    .then(data => setCart(data))
+}, [])
 
   const handleLogOut = () => {
     logOut()

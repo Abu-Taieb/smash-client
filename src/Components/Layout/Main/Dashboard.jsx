@@ -40,13 +40,13 @@ const Dashboard = () => {
             <li>
               <NavLink to="/dashboard/selectedClasses">
                 <FaBookmark></FaBookmark>
-                My Selected Classes <span className="badge">+99</span>
+                My Selected Classes
               </NavLink>
             </li>
             <li>
               <NavLink to={"/dashboard/enrolledClasses"}>
                 <FaBookReader></FaBookReader>
-                My Enrolled Classes <span className="badge">+73</span>
+                My Enrolled Classes
               </NavLink>
             </li>
             <li>
